@@ -82,16 +82,19 @@ HTTP 502 Bad Gateway 알람 대량 발생 문제로 인해 log 확인 결과 Tom
 
 정확한 테스트 지표를 위해 K6는 별도의 서버(개인 PC) 에서 진행하였습니다.
 
-### 프로세스 버전 및 환경설정 -  OS Ubuntu 24.04.2 LTS -  Tomcat 8.5.93 [Docker]
--  maxThreads - 200
--  accept-count - 10
--  Xss4m
--  ulimit -u - 150 -  Nginx [Docker]
--  proxy_connect_timeout - 5s
--  proxy_send_timeout - 5s
--  proxy_read_timeout - 5s
--  send_timeout - 5s -  Oracle-12c [Docker]
--  DBCP maxActive - 50
+### 프로세스 버전 및 환경설정 -  OS Ubuntu 24.04.2 LTS 
+-  Tomcat 8.5.93 [Docker]
+   -  maxThreads - 200
+   -  accept-count - 10
+   -  Xss4m
+-  ulimit -u - 150
+-  Nginx [Docker]
+   -  proxy_connect_timeout - 5s
+   -  proxy_send_timeout - 5s
+   -  proxy_read_timeout - 5s
+-  Oracle-12c [Docker]
+   -  send_timeout - 5s 
+   -  DBCP maxActive - 50
 
 ### 상황 재현 시도 1 [ DBCP 점유 ]
 
